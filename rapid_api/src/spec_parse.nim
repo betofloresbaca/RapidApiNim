@@ -5,8 +5,12 @@ import strformat
 import anycase
 import strutils
 import re
+import options
 
 type
+  EndpointResponseTypeEnum* = enum
+    EndpointResponseTypeText = "TEXT"
+    EndpointResponseTypeJson = "JSON"
   EndpointMethodEnum* = enum
     EndpointMethodGet = "GET"
     EndpointMethodPost = "POST"
@@ -15,6 +19,7 @@ type
     EndpointMethodDelete = "DELETE"
   ParameterTypeEnum* = enum
     ParameterTypeRouteParameter = "ROUTE"
+    ParameterTypeHeaderParameter = "HEADER"
   ParameterValueTypeEnum* = enum
     ParameterValueTypeString = "VALUE"
   ParameterConditionEnum* = enum
@@ -38,7 +43,7 @@ type
     name: string
     route: string
     description: string
-    responseType: string
+    responseType: EndpointResponseTypeEnum
     parameters: seq[ParameterSpec]
   ParameterSpec* = object
     meta: ParameterSpecMeta
@@ -48,7 +53,7 @@ type
     condition: ParameterConditionEnum
     status: ParameterStatusEnum
     parameterType: ParameterTypeEnum
-    value: string
+    value: Option[string]
 
 proc fromJson(T: typedesc[ParameterSpec], json_node: JsonNode): ParameterSpec =
   result.name = json_node["name"].str
@@ -67,17 +72,34 @@ proc fromJson(T: typedesc[ParameterSpec], json_node: JsonNode): ParameterSpec =
   case json_node["type"].str:
     of "routeparameter":
       result.parameterType = ParameterTypeRouteParameter
+    of "headerparameter":
+      result.parameterType = ParameterTypeHeaderParameter
+      
   if json_node.hasKey("value"):
-    result.value = json_node["value"].str
+    result.value = some(json_node["value"].str)
+  else:
+    result.value = none(string)
 
 proc fromJson(T: typedesc[EndpointSpec], json_node: JsonNode): EndpointSpec =
   case json_node["method"].str:
     of "GET":
       result.httpMethod = EndpointMethodGet
+    of "POST":
+      result.httpMethod = EndpointMethodPost
+    of "PUT":
+      result.httpMethod = EndpointMethodPut
+    of "PATCH":
+      result.httpMethod = EndpointMethodPatch
+    of "DELETE":
+      result.httpMethod = EndpointMethodDelete
   result.name = json_node["name"].str
   result.route = json_node["route"].str
   result.description = json_node["description"].str
-  result.responseType = json_node["responsePayloads"][0]["format"].str
+  case json_node["responsePayloads"][0]["format"].str:
+    of "Text":
+      result.responseType = EndpointResponseTypeText
+    of "JSON":
+      result.responseType = EndpointResponseTypeJson
   if json_node["params"].kind == JObject:
     for parameter_json in json_node["params"]["parameters"]:
       result.parameters.add fromJson(ParameterSpec, parameter_json)
@@ -104,4 +126,7 @@ proc buildMetaSpecFile*(in_filename: string, out_filename: string) =
   var spec = loadApiSpec(in_filename)
   buildApiSpecMeta(spec)
   writeFile(out_filename, pretty(%spec))
+
+proc loadMetaSpec*(filename: string): ApiSpec =
+  result = parseJson(readFile(filename)).to(ApiSpec)
 

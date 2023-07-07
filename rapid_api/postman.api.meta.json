@@ -1,0 +1,1568 @@
+{
+  "meta": {
+    "hostUrl": "https://postman6.p.rapidapi.com"
+  },
+  "host": "postman6.p.rapidapi.com",
+  "endpoints": [
+    {
+      "meta": {
+        "procName": "getAllMonitors"
+      },
+      "httpMethod": "GET",
+      "name": "AllMonitors",
+      "route": "/monitors",
+      "description": "The `/monitors` endpoint returns a list of all [monitors](https://monitor.getpostman.com/) that are accessible by you.\n\nThe response contains an array of monitors information containing the `name`, `id`, `owner` and `uid` of each monitor.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "deleteDeleteMonitor"
+      },
+      "httpMethod": "DELETE",
+      "name": "DeleteMonitor",
+      "route": "/monitors/{monitor_uid}",
+      "description": "This endpoint can be used to delete an existing monitor using its `uid`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "monitor_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getAllMocks"
+      },
+      "httpMethod": "GET",
+      "name": "AllMocks",
+      "route": "/mocks",
+      "description": "This endpoint fetches all the mocks that you have created.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getAllCollections"
+      },
+      "httpMethod": "GET",
+      "name": "AllCollections",
+      "route": "/collections",
+      "description": "The `/collections` endpoint returns a list of all [collections](https://www.getpostman.com/docs/collections) that are accessible by you. The list includes your own collections and the collections that you have subscribed to.\n\nThe response contains an array of collection information containing the `name`, `id`, `owner` and `uid` of each collection.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getSingleCollection"
+      },
+      "httpMethod": "GET",
+      "name": "SingleCollection",
+      "route": "/collections/{collection_uid}",
+      "description": "Access the contents of a collection that is accessible to you using its unique id (`uid`).\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "collection_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getSingleEnvironment"
+      },
+      "httpMethod": "GET",
+      "name": "SingleEnvironment",
+      "route": "/environments/{environment_uid}",
+      "description": "Access the contents of an environment that is accessible to you using its unique id (`uid`).\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "environment_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getSingleMonitor"
+      },
+      "httpMethod": "GET",
+      "name": "SingleMonitor",
+      "route": "/monitors/{monitor_uid}",
+      "description": "This endpoint fetches you basic information about the monitor using its `uid`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "monitor_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "deleteDeleteEnvironment"
+      },
+      "httpMethod": "DELETE",
+      "name": "DeleteEnvironment",
+      "route": "/environments/{environment_uid}",
+      "description": "This endpoint allows you to delete a single environment based on an environment's unique `uid`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "environment_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "deleteDeleteanVersion"
+      },
+      "httpMethod": "DELETE",
+      "name": "DeleteanAPIVersion",
+      "route": "/apis/{apiId}/versions/{apiVersionId}",
+      "description": "This call deletes an existing API Version having the specified id.  \n\nResponse contains an `version` object with `id` of the API Version which was deleted.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiVersionId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "deleteDeleteMock"
+      },
+      "httpMethod": "DELETE",
+      "name": "DeleteMock",
+      "route": "/mocks/{mock_uid}",
+      "description": "This endpoint allows you to delete an existing mock using its `uid`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "mock_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postRunaMonitor"
+      },
+      "httpMethod": "POST",
+      "name": "RunaMonitor",
+      "route": "/monitors/{monitor_uid}/run",
+      "description": "This endpoint will run the monitor instantly and wait for the monitor to run completely. It responds with the run results.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "monitor_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getSingleMock"
+      },
+      "httpMethod": "GET",
+      "name": "SingleMock",
+      "route": "/mocks/{mock_uid}",
+      "description": "This endpoint fetches you the basic information about a single mock using its `uid`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "mock_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "deleteDeleteCollection"
+      },
+      "httpMethod": "DELETE",
+      "name": "DeleteCollection",
+      "route": "/collections/{collection_uid}",
+      "description": "This endpoint allows you to delete an existing collection.\n\nOn successful deletion of the collection, the response returns the `id` and `uid`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "collection_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getGetanVersion"
+      },
+      "httpMethod": "GET",
+      "name": "GetanAPIVersion",
+      "route": "/apis/{apiId}/versions/{apiVersionId}",
+      "description": "This call fetches details about the specified API Version.\n\nThe response will contain a `version` object which would contain all the details of the API Version.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiVersionId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getSingleworkspace"
+      },
+      "httpMethod": "GET",
+      "name": "Singleworkspace",
+      "route": "/workspaces/{workspace_id}",
+      "description": "Access the contents of a workspace that is accessible to you using its id (`id`). Includes the collections, environments, mocks and monitors of that workspace.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "workspace_id",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getSingle"
+      },
+      "httpMethod": "GET",
+      "name": "SingleAPI",
+      "route": "/apis/{apiId}",
+      "description": "This call fetches a single API having the specified id.\n\nResponse contains an `api` object with all the details related to the queried API, namely, `id`, `name`, `summary`, `description` etc. \n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getGetlinkedrelations"
+      },
+      "httpMethod": "GET",
+      "name": "Getlinkedrelations",
+      "route": "/apis/{apiId}/versions/{apiVersionId}/relations",
+      "description": "This call fetches all the relations which are linked in the specified API Version along with their details.\n\nThe response will contain a `relations` object which would contain all the relation types which are linked to the apiversion. Each of the relation type will be an object which would contain details about the relations of this type. \n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiVersionId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getGetSchema"
+      },
+      "httpMethod": "GET",
+      "name": "GetSchema",
+      "route": "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}",
+      "description": "This call fetches a single schema having the specified id.\n\nResponse contains a `schema` object with all the details related to the schema, namely, `id`, `language`, `type`, `schema` etc. \n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "schemaId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiVersionId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "deleteDeletean"
+      },
+      "httpMethod": "DELETE",
+      "name": "DeleteanAPI",
+      "route": "/apis/{apiId}",
+      "description": "This call deletes an existing API having the specified id.  \n\nResponse contains an `api` object with `id` of the API which was deleted.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "deleteDeleteWorkspace"
+      },
+      "httpMethod": "DELETE",
+      "name": "DeleteWorkspace",
+      "route": "/workspaces/{workspace_id}",
+      "description": "This endpoint allows you to delete an existing workspace.\n\nOn successful deletion of the workspace, the response returns the `id`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "workspace_id",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getKeyOwner"
+      },
+      "httpMethod": "GET",
+      "name": "APIKeyOwner",
+      "route": "/me",
+      "description": "The `/me` endpoint allows you to fetch relevant information pertaining to the API Key being used.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getGetAllVersions"
+      },
+      "httpMethod": "GET",
+      "name": "GetAllAPIVersions",
+      "route": "/apis/{apiId}/versions",
+      "description": "This call fetches details about the all the API Versions in the specified API.\n\nThe response will contain an array `versions` object which would be a list of all the API Version along with their details.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getAllworkspaces"
+      },
+      "httpMethod": "GET",
+      "name": "Allworkspaces",
+      "route": "/workspaces",
+      "description": "The `/workspaces` endpoint returns a list of all [workspaces](https://www.getpostman.com/docs/v6/postman/workspaces/intro_to_workspaces) that is accessible by you. The list includes your own workspaces and the workspaces that you have access to.\n\nThe response contains an array of collection information containing the `name`, `id`, and `type` of each workspace.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getAllEnvironments"
+      },
+      "httpMethod": "GET",
+      "name": "AllEnvironments",
+      "route": "/environments",
+      "description": "The `/environments` endpoint returns a list of all [environments](https://www.getpostman.com/docs/environments) that belong to you..\n\nThe response contains an array of environments' information containing the `name`, `id`, `owner` and `uid` of each environment.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postCreateaFork"
+      },
+      "httpMethod": "POST",
+      "name": "CreateaFork",
+      "route": "/collections/fork/{collection_uid}",
+      "description": "This endpoint allows you to create a fork from an existing collection.\n\nOn successful creation of the collection, the response returns the collection `name`, `id`, `uid` along with `fork` information.\n\nYou can also specify the context of a workspace to fork a collection in by passing the `workspace` as a query param.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "workspace",
+          "isQueryString": true,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "collection_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postCreate"
+      },
+      "httpMethod": "POST",
+      "name": "CreateAPI",
+      "route": "/apis",
+      "description": "This call creates a new API with a default API Version.  \n\nRequest body should contain an `api` object which should atleast have a property `name`.\n\nResponse contains an `api` object with all the details related to the created API, namely, `id`, `name`, `summary`, `description` etc. \n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "workspace",
+          "isQueryString": true,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postCreateVersion"
+      },
+      "httpMethod": "POST",
+      "name": "CreateAPIVersion",
+      "route": "/apis/{apiId}/versions",
+      "description": "This call creates a new API version in the specified API.  \n\nRequest body should contain a `version` object which should have fields:\n\n<table>\n<tr>\n\t<td>name</td>\n\t<td>Required. Name of the API Version</td>\n</tr>\n<tr>\n\t<td>source</td>\n\t<td>\n\t\tIf specified, it will copy the contents of the specified api version to create a new api verison.\n\t\t<table>\n\t\t\t<tr>\n\t\t\t\t<td>id</td>\n\t\t\t\t<td>Required. Id of the apiversion from where the details are to be copied</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>schema</td>\n\t\t\t\t<td>Boolean. If true then copies the schema from the specified api version</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>relations</td>\n\t\t\t\t<td>Object. {\"&lt;relationType&gt;\": true/false}.  \n\t\t\t\t\tAllowed relation types are `mock`, `monitor`, `documentation`, `contracttest`, `integrationtest`, `testsuite`, `environment`\n\t\t\t\tRelation types which should be copied over to the new api verison</td>\n\t\t\t</tr>\n\t\t</table>\n\t</td>\n</tr>\n</table>\n\nResponse contains a `version` object with all the details related to the created API Version, namely, `id`, `name`, `api`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postCreateCollection"
+      },
+      "httpMethod": "POST",
+      "name": "CreateCollection",
+      "route": "/collections",
+      "description": "This endpoint allows you to create collections using the Postman Collection v2 format. For more information about the v2 schema, check the format [here](https://schema.getpostman.com/json/collection/v2.0.0/docs/index.html).\n\nOn successful creation of the collection, the response returns the collection `name`, `id` and the `uid`.\n\nYou can also specify the context of a workspace to create a collection in directly by passing the `workspace` as a query param.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postCreateEnvironment"
+      },
+      "httpMethod": "POST",
+      "name": "CreateEnvironment",
+      "route": "/environments",
+      "description": "A sample body is added to the request that conforms to the following JSON schema:\n\n```json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"environment\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n              \"type\": \"string\",\n              \"maxLength\": 254,\n              \"minLength\": 1\n            },\n        \"values\": {\n          \"type\": \"array\",\n          \"maxItems\": 100,\n          \"additionalItems\": false,\n          \"items\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"key\": {\n                  \"type\": \"string\",\n                  \"maxLength\": 254\n                  \"minLength\": 1\n                },\n                \"value\": { \"type\": \"string\" },\n                \"enabled\": { \"type\": \"boolean\" }\n              },\n              \"required\": [\"key\", \"value\"]\n            }\n        }\n      },\n      \"required\": [\"name\"]\n    }\n  },\n  \"required\": [\"environment\"]\n}\n```\n\nOn successful creation of the environment, the API returns the environment name and `id`.\n\nYou can also specify the context of a workspace to create an environment in directly by passing the `workspace` as a query param.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postCreateMock"
+      },
+      "httpMethod": "POST",
+      "name": "CreateMock",
+      "route": "/mocks",
+      "description": "This endpoint allows you to create a mock on a collection. You can also provide an environment UID to resolve any environment variables in the collection.\n\nYou can also specify the context of a workspace to create a mock in directly by passing the `workspace` as a query param.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postCreateMonitor"
+      },
+      "httpMethod": "POST",
+      "name": "CreateMonitor",
+      "route": "/monitors",
+      "description": "This endpoint allows you to create a monitor.\n\nSome sample `cron` values are:\n\n| Frequency                  | Cron Pattern   |\n|-----------------------|----------------|\n| Every 5 minutes       | `*/5 * * * *`  |\n| Every 30 minutes     | `*/30 * * * *` |\n| Every Hour         | `0 */1 * * *`  |\n| Every 6 Hours      | `0 */6 * * *`  |\n| Every day at 5pm    | `0 17 * * *`   |\n| Every Monday at 12pm  | `0 12 * * MON` |\n| Every weekday (Monday - Friday) at 6am | `0 6 * * MON-FRI` |\n\nNote: Currently, you can only create monitors at some limited schedules. You can head to [Postman Monitors](https://monitor.getpostman.com) to see the allowed schedules. \n\nFor more information about the format of the `timezone` value, check this [list of time zones.](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)\n\nYou can also specify the context of a workspace to create a monitor in directly by passing the `workspace` as a query param.\n\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postCreateSchema"
+      },
+      "httpMethod": "POST",
+      "name": "CreateSchema",
+      "route": "/apis/{apiId}/versions/{apiVersionId}/schemas",
+      "description": "This call creates a new schema.\n\nRequest body should contain a `schema` object which should atleast have these properties with `string` values:\n\n- **`type`**: Allowed types are `openapi3`, `openapi2`, `openapi1`, `raml` and `graphql`.\n- **`language`** : Allowed languages are `json` and `yaml` for OpenAPI and RAML schema types. GraphQL schema type accepts only `graphql` language.\n- **`schema`**: Optional. If passed, must be the content of the schema as a `string`.\n\nResponse contains a `schema` object with all the details related to the created schema, namely, `id`, `language`, `type` etc. \n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiVersionId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postCreateWorkspace"
+      },
+      "httpMethod": "POST",
+      "name": "CreateWorkspace",
+      "route": "/workspaces",
+      "description": "This endpoint allows you to create a workspace and populate it with entities like `collections`, `environments`, `mocks` and `monitors` using their `uid`.\n\nOn successful creation of the workspace, the response returns the workspcae `name` and `id`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getGetallIs"
+      },
+      "httpMethod": "GET",
+      "name": "GetallAPIs",
+      "route": "/apis",
+      "description": "This call fetches all the APIs present in the specified workspace\n\nResponse contains an array named `apis` which would contain all the details of APIs present in the workspace.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "workspace",
+          "isQueryString": true,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postImportexporteddata"
+      },
+      "httpMethod": "POST",
+      "name": "Importexporteddata",
+      "route": "/import/exported",
+      "description": "This endpoint allows you to import your exported Postman data.\nFor more information about how you can export your data, refer <a href=\"https://go.postman.co/me/export\">Export your Postman data.</a>\n\nOn successful imports, the response will be an array with Each element contaning `id`, `name` and `uid` of entities created.\n\n**Note**: Refer to examples for different scenarios.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "input",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "type",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postImportexternalIspecification"
+      },
+      "httpMethod": "POST",
+      "name": "ImportexternalAPIspecification",
+      "route": "/import/{importType}",
+      "description": "This endpoint allows you to import external API specifications into Postman.\n\nCurrently, this endpoint only supports the <a href=\"https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md\">OpenAPI</a> specification, for which the `importType` will be `openapi`.\n\nOn a successful import, the response will be an array with each element contaning `id`, `name` and `uid` of entities created.\n\nSupported `type`s:\n\n- string\n- json\n- file\n\nThe `input` parameter should be defined based on the `type`.\n\n> To import a file, request body must be form-data with `type` param set to `file`.\n\n**Note**: Refer to examples for different scenarios.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "importType",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "postMergeaFork"
+      },
+      "httpMethod": "POST",
+      "name": "MergeaFork",
+      "route": "/collections/merge",
+      "description": "This endpoint allows you to merge a forked collection back to its destination collection.\n\nOn successful creation of the collection, the response returns the collection `name`, `id` and `uid`.\n\nYou need to specify the fork UID (as `source`) and destination collection UID (as `destination`) in the request body.\n\nOptionally, you can also specify the merge strategy as either `deleteSource` or `updateSourceWithDestination`. Following is an explanation of the merge strategies\n\n| Merge Strategy | Behaviour |\n| --- | --- |\n| deleteSource | Forked collection is deleted after merging |\n| updateSourceWithDestination | Forked collection is up to date with changes in destination collection |\n\nIf the collections cannot be merged (due to conflicts), appropriate error messages will be returned.\n\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "putUpdatean"
+      },
+      "httpMethod": "PUT",
+      "name": "UpdateanAPI",
+      "route": "/apis/{apiId}",
+      "description": "This call updates an existing API .  \n\nRequest body should contain an `api` object which should have the fields to be updated. Only `name`, `summary` and `description` fields can be edited for an API.\n\nResponse contains an `api` object with all the details related to the created API, namely, `id`, `name`, `summary`, `description` etc. \n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "putUpdateanVersion"
+      },
+      "httpMethod": "PUT",
+      "name": "UpdateanAPIVersion",
+      "route": "/apis/{apiId}/versions/{apiVersionId}",
+      "description": "This call updates an existing API Version.  \n\nRequest body should contain a `version` object with the fields which need to be updated. Only field which can be updated is `name`.\n\nResponse contains a `version` object with all the details related to the created API Version, namely, `id`, `name`, `api` etc.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiVersionId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "putUpdateCollection"
+      },
+      "httpMethod": "PUT",
+      "name": "UpdateCollection",
+      "route": "/collections/{collection_uid}",
+      "description": "This endpoint allows you to update an existing collection using the Postman Collection v2 format. For more information about the v2 schema, check the format [here](https://schema.getpostman.com/json/collection/v2.0.0/docs/index.html).\n\nOn successful updation of the collection, the response returns the collection `name`, `id` and `uid`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.\n\nNote: Please be careful when trying to update the collection, as the existing collection will be replaced by the request body.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "collection_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "putUpdateEnvironment"
+      },
+      "httpMethod": "PUT",
+      "name": "UpdateEnvironment",
+      "route": "/environments/{environment_uid}",
+      "description": "This endpoint replaces an existing environment.\n\nA sample body is added to the request that conforms to the following JSON schema:\n\n```json\n{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"environment\": {\n\t\t\t\"type\": \"object\",\n\t\t\t\"properties\": {\n\t\t\t\t\"name\": {\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"maxLength\": 254,\n\t\t\t\t\t\"minLength\": 1\n\t\t\t\t},\n\t\t\t\t\"values\": {\n\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\"maxItems\": 100,\n\t\t\t\t\t\"additionalItems\": false,\n\t\t\t\t\t\"items\": {\n\t\t\t\t\t\t\"type\": \"object\",\n\t\t\t\t\t\t\"properties\": {\n\t\t\t\t\t\t\t\"key\": {\n\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\"maxLength\": 254,\n\t\t\t\t\t\t\t\t\"minLength\": 1\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"value\": {\n\t\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\t\"maxLength\": 254,\n\t\t\t\t\t\t\t\t\"minLength\": 1\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"type\": {\n\t\t\t\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\"enabled\": {\n\t\t\t\t\t\t\t\t\"type\": \"boolean\"\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"required\": [\n\t\t\t\t\t\t\t\"key\",\n\t\t\t\t\t\t\t\"value\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t},\n\t\"required\": [\n\t\t\"environment\"\n\t]\n}\n```\n\nOn successful updation of the environment, the API returns the environment name and `id`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "environment_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "putUpdateMonitor"
+      },
+      "httpMethod": "PUT",
+      "name": "UpdateMonitor",
+      "route": "/monitors/{monitor_uid}",
+      "description": "This endpoint allows you to update a monitor using its `uid`. Only the monitor name and its schedule can be updated.\n\nSome example `cron` values are:\n\n| Frequency                  | Cron Pattern   |\n|-----------------------|----------------|\n| Every 5 minutes       | `*/5 * * * *`  |\n| Every 30 minutes     | `*/30 * * * *` |\n| Every Hour         | `0 */1 * * *`  |\n| Every 6 Hours      | `0 */6 * * *`  |\n| Every day at 5pm    | `0 17 * * *`   |\n| Every Monday at 12pm  | `0 12 * * MON` |\n| Every weekday (Monday - Friday) at 6am | `0 6 * * MON-FRI` |\n\nNote: Currently, you can only create monitors at some limited schedules. You can head to [Postman Monitors](https://monitor.getpostman.com) to see the allowed schedules. \n\nFor more information about the format of the `timezone` value, check this [list of time zones.](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "X-Api-Key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "monitor_uid",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "putUpdateSchema"
+      },
+      "httpMethod": "PUT",
+      "name": "UpdateSchema",
+      "route": "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}",
+      "description": "This call updates an existing schema.\n\nRequest body should contain a `schema` object which should atleast have these properties with `string` values:\n\n- **`type`**: Allowed types are `openapi3`, `openapi2`, `openapi1`, `raml` and `graphql`.\n- **`language`** : Allowed languages are `json` and `yaml` for OpenAPI and RAML schema types. GraphQL schema type accepts only `graphql` language.\n- **`schema`**: Optional. If passed, must be the content of the schema as a `string`.\n\nResponse contains a `schema` object with all the details related to the created schema, namely, `id`, `language`, `type` etc. \n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "apiVersionId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "schemaId",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "putUpdateWorkspace"
+      },
+      "httpMethod": "PUT",
+      "name": "UpdateWorkspace",
+      "route": "/workspaces/{workspace_id}",
+      "description": "This endpoint allows you to update a workspace and update it's association to entities like `collections`, `environments`, `mocks` and `monitors` using their `uid`.\n\nOn successful updation of the workspace, the response returns the workspcae `name` and `id`.\n\n> Requires <a href=\"#authentication\">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.\n\n**Note** : The endpoint expects you to send the desired state of the workspace in terms of the associated entities so be careful when trying to update these entities.\n\nFor eg. if your workspace has collections A and B, and in the update call, you send C's uid in the collections array, then A and B would be removed from the workspace and C would be added.",
+      "responseType": "JSON",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "x-api-key",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "HEADER",
+          "value": null
+        },
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "workspace_id",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": null
+        }
+      ]
+    }
+  ]
+}

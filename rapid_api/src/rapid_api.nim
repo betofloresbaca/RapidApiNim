@@ -1,9 +1,11 @@
 
 include ./api_macros
+import print
 
-
-
-buildMetaSpecFile("deezer.api.json", "deezer.api.meta.json")
+# buildMetaSpecFile("deezer.api.json", "deezer.api.meta.json")
+# print loadMetaSpec("deezer.api.meta.json")
+buildMetaSpecFile("postman.api.json", "postman.api.meta.json")
+print loadMetaSpec("postman.api.meta.json")
 
 
 # api(DeezerRapidApi, "deezer.api.json")

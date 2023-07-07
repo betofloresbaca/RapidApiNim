@@ -12,7 +12,7 @@
       "name": "Infos",
       "route": "/infos",
       "description": "Get the infos about the api in the current country",
-      "responseType": "Text",
+      "responseType": "TEXT",
       "parameters": []
     },
     {
@@ -23,7 +23,7 @@
       "name": "Radio",
       "route": "/radio/{id}",
       "description": "A radio object",
-      "responseType": "Text",
+      "responseType": "TEXT",
       "parameters": [
         {
           "meta": {
@@ -35,7 +35,7 @@
           "condition": "REQUIRED",
           "status": "ACTIVE",
           "parameterType": "ROUTE",
-          "value": ""
+          "value": null
         }
       ]
     },
@@ -47,7 +47,7 @@
       "name": "Genre",
       "route": "/genre/{id}",
       "description": "A genre object",
-      "responseType": "Text",
+      "responseType": "TEXT",
       "parameters": [
         {
           "meta": {
@@ -59,7 +59,7 @@
           "condition": "REQUIRED",
           "status": "ACTIVE",
           "parameterType": "ROUTE",
-          "value": ""
+          "value": null
         }
       ]
     },
@@ -71,7 +71,7 @@
       "name": "* Search",
       "route": "/search",
       "description": "Search tracks",
-      "responseType": "Text",
+      "responseType": "TEXT",
       "parameters": [
         {
           "meta": {
@@ -95,7 +95,7 @@
       "name": "Playlist",
       "route": "/playlist/{id}",
       "description": "A playlist object",
-      "responseType": "Text",
+      "responseType": "TEXT",
       "parameters": [
         {
           "meta": {
@@ -107,7 +107,7 @@
           "condition": "REQUIRED",
           "status": "ACTIVE",
           "parameterType": "ROUTE",
-          "value": ""
+          "value": null
         }
       ]
     },
@@ -119,7 +119,7 @@
       "name": "Artist",
       "route": "/artist/{id}",
       "description": "An artist object",
-      "responseType": "Text",
+      "responseType": "TEXT",
       "parameters": [
         {
           "meta": {
@@ -131,7 +131,7 @@
           "condition": "REQUIRED",
           "status": "ACTIVE",
           "parameterType": "ROUTE",
-          "value": ""
+          "value": null
         }
       ]
     },
@@ -143,7 +143,7 @@
       "name": "Editorial",
       "route": "/editorial/{id}",
       "description": "An editorial object",
-      "responseType": "Text",
+      "responseType": "TEXT",
       "parameters": [
         {
           "meta": {
@@ -155,7 +155,7 @@
           "condition": "REQUIRED",
           "status": "ACTIVE",
           "parameterType": "ROUTE",
-          "value": ""
+          "value": null
         }
       ]
     },
@@ -167,7 +167,7 @@
       "name": "Track",
       "route": "/track/{id}",
       "description": "A track object",
-      "responseType": "Text",
+      "responseType": "TEXT",
       "parameters": [
         {
           "meta": {
@@ -179,7 +179,7 @@
           "condition": "REQUIRED",
           "status": "ACTIVE",
           "parameterType": "ROUTE",
-          "value": ""
+          "value": null
         }
       ]
     },
@@ -191,7 +191,7 @@
       "name": "Comment",
       "route": "/comment/{id}",
       "description": "A comment object",
-      "responseType": "Text",
+      "responseType": "TEXT",
       "parameters": [
         {
           "meta": {
@@ -203,7 +203,7 @@
           "condition": "REQUIRED",
           "status": "ACTIVE",
           "parameterType": "ROUTE",
-          "value": ""
+          "value": null
         }
       ]
     },
@@ -215,7 +215,7 @@
       "name": "Album",
       "route": "/album/{id}",
       "description": "An album object",
-      "responseType": "Text",
+      "responseType": "TEXT",
       "parameters": [
         {
           "meta": {
@@ -227,7 +227,7 @@
           "condition": "REQUIRED",
           "status": "ACTIVE",
           "parameterType": "ROUTE",
-          "value": ""
+          "value": null
         }
       ]
     }
