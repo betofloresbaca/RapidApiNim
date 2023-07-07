@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "hostUrl": "https://deezerdevs-deezer.p.rapidapi.com"
+  },
+  "host": "deezerdevs-deezer.p.rapidapi.com",
+  "endpoints": [
+    {
+      "meta": {
+        "procName": "getInfos"
+      },
+      "httpMethod": "GET",
+      "name": "Infos",
+      "route": "/infos",
+      "description": "Get the infos about the api in the current country",
+      "responseType": "Text",
+      "parameters": []
+    },
+    {
+      "meta": {
+        "procName": "getRadio"
+      },
+      "httpMethod": "GET",
+      "name": "Radio",
+      "route": "/radio/{id}",
+      "description": "A radio object",
+      "responseType": "Text",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "id",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getGenre"
+      },
+      "httpMethod": "GET",
+      "name": "Genre",
+      "route": "/genre/{id}",
+      "description": "A genre object",
+      "responseType": "Text",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "id",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getSearch"
+      },
+      "httpMethod": "GET",
+      "name": "* Search",
+      "route": "/search",
+      "description": "Search tracks",
+      "responseType": "Text",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "q",
+          "isQueryString": true,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": "eminem"
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getPlaylist"
+      },
+      "httpMethod": "GET",
+      "name": "Playlist",
+      "route": "/playlist/{id}",
+      "description": "A playlist object",
+      "responseType": "Text",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "id",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getArtist"
+      },
+      "httpMethod": "GET",
+      "name": "Artist",
+      "route": "/artist/{id}",
+      "description": "An artist object",
+      "responseType": "Text",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "id",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getEditorial"
+      },
+      "httpMethod": "GET",
+      "name": "Editorial",
+      "route": "/editorial/{id}",
+      "description": "An editorial object",
+      "responseType": "Text",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "id",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getTrack"
+      },
+      "httpMethod": "GET",
+      "name": "Track",
+      "route": "/track/{id}",
+      "description": "A track object",
+      "responseType": "Text",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "id",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getComment"
+      },
+      "httpMethod": "GET",
+      "name": "Comment",
+      "route": "/comment/{id}",
+      "description": "A comment object",
+      "responseType": "Text",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "id",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "meta": {
+        "procName": "getAlbum"
+      },
+      "httpMethod": "GET",
+      "name": "Album",
+      "route": "/album/{id}",
+      "description": "An album object",
+      "responseType": "Text",
+      "parameters": [
+        {
+          "meta": {
+            "other": ""
+          },
+          "name": "id",
+          "isQueryString": false,
+          "parameterValueType": "VALUE",
+          "condition": "REQUIRED",
+          "status": "ACTIVE",
+          "parameterType": "ROUTE",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}

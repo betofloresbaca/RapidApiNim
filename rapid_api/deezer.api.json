@@ -1,0 +1,676 @@
+{
+  "data": {
+    "apiVersion": {
+      "id": "53aa5085e4b07e1f4ebeb426",
+      "targetGroup": null,
+      "__typename": "ApiVersion",
+      "endpoints": [
+        {
+          "id": "53aa5087e4b0b60946a2f5ea",
+          "index": null,
+          "createdAt": "2014-06-25T04:31:03.179Z",
+          "group": null,
+          "method": "GET",
+          "name": "Infos",
+          "route": "/infos",
+          "description": "Get the infos about the api in the current country",
+          "summary": "",
+          "isGraphQL": false,
+          "endpointPath": null,
+          "externalDocs": null,
+          "graphQLSchema": null,
+          "params": null,
+          "appliedOauth2Scopes": [],
+          "responsePayloads": [
+            {
+              "id": "53aa5087e4b0b60946a2f5e9",
+              "name": "Infos Response",
+              "format": "Text",
+              "body": null,
+              "headers": null,
+              "description": "",
+              "type": "apipayload",
+              "statusCode": null,
+              "apiendpoint": null,
+              "examples": {},
+              "schema": null,
+              "__typename": "ResponsePayload"
+            }
+          ],
+          "requestPayloads": [],
+          "authentication": null,
+          "__typename": "Endpoint"
+        },
+        {
+          "id": "53aa5087e4b0a9b1348da6a3",
+          "index": null,
+          "createdAt": "2014-06-25T04:31:03.560Z",
+          "group": null,
+          "method": "GET",
+          "name": "Radio",
+          "route": "/radio/{id}",
+          "description": "A radio object",
+          "summary": "",
+          "isGraphQL": false,
+          "endpointPath": null,
+          "externalDocs": null,
+          "graphQLSchema": null,
+          "params": {
+            "parameters": [
+              {
+                "createdAt": 1403670663607,
+                "updatedAt": 1403670663663,
+                "id": "53aa5087e4b0596140340675",
+                "name": "id",
+                "endpoint": "53aa5087e4b0a9b1348da6a3",
+                "querystring": false,
+                "paramType": "STRING",
+                "condition": "REQUIRED",
+                "description": "The radio deezer ID",
+                "status": "ACTIVE",
+                "type": "routeparameter"
+              }
+            ],
+            "__typename": "EndpointParams"
+          },
+          "appliedOauth2Scopes": [],
+          "responsePayloads": [
+            {
+              "id": "53aa5087e4b0a9b1348da6a2",
+              "name": "Radio Response",
+              "format": "Text",
+              "body": null,
+              "headers": null,
+              "description": "",
+              "type": "apipayload",
+              "statusCode": null,
+              "apiendpoint": null,
+              "examples": {},
+              "schema": null,
+              "__typename": "ResponsePayload"
+            }
+          ],
+          "requestPayloads": [],
+          "authentication": null,
+          "__typename": "Endpoint"
+        },
+        {
+          "id": "53aa5086e4b07e1f4ebeb42f",
+          "index": null,
+          "createdAt": "2014-06-25T04:31:02.873Z",
+          "group": null,
+          "method": "GET",
+          "name": "Genre",
+          "route": "/genre/{id}",
+          "description": "A genre object",
+          "summary": "",
+          "isGraphQL": false,
+          "endpointPath": null,
+          "externalDocs": null,
+          "graphQLSchema": null,
+          "params": {
+            "parameters": [
+              {
+                "createdAt": 1403670662965,
+                "updatedAt": 1403670663051,
+                "id": "53aa5086e4b0f2c97547026f",
+                "name": "id",
+                "endpoint": "53aa5086e4b07e1f4ebeb42f",
+                "querystring": false,
+                "paramType": "STRING",
+                "condition": "REQUIRED",
+                "description": "The editorial's Deezer id",
+                "status": "ACTIVE",
+                "type": "routeparameter"
+              }
+            ],
+            "__typename": "EndpointParams"
+          },
+          "appliedOauth2Scopes": [],
+          "responsePayloads": [
+            {
+              "id": "53aa5086e4b0596140340671",
+              "name": "Genre Response",
+              "format": "Text",
+              "body": null,
+              "headers": null,
+              "description": "",
+              "type": "apipayload",
+              "statusCode": null,
+              "apiendpoint": null,
+              "examples": {},
+              "schema": null,
+              "__typename": "ResponsePayload"
+            }
+          ],
+          "requestPayloads": [],
+          "authentication": null,
+          "__typename": "Endpoint"
+        },
+        {
+          "id": "53aa5085e4b07e1f4ebeb429",
+          "index": null,
+          "createdAt": "2014-06-25T04:31:01.760Z",
+          "group": null,
+          "method": "GET",
+          "name": "* Search",
+          "route": "/search",
+          "description": "Search tracks",
+          "summary": "",
+          "isGraphQL": false,
+          "endpointPath": null,
+          "externalDocs": null,
+          "graphQLSchema": null,
+          "params": {
+            "parameters": [
+              {
+                "createdAt": 1403670661830,
+                "id": "53aa5085e4b07e1f4ebeb42a",
+                "name": "q",
+                "endpoint": "53aa5085e4b07e1f4ebeb429",
+                "value": "eminem",
+                "querystring": true,
+                "paramType": "STRING",
+                "condition": "REQUIRED",
+                "status": "ACTIVE",
+                "type": "routeparameter"
+              }
+            ],
+            "__typename": "EndpointParams"
+          },
+          "appliedOauth2Scopes": [],
+          "responsePayloads": [
+            {
+              "id": "53aa5085e4b07e1f4ebeb428",
+              "name": "-Search Response",
+              "format": "Text",
+              "body": null,
+              "headers": null,
+              "description": "",
+              "type": "apipayload",
+              "statusCode": null,
+              "apiendpoint": null,
+              "examples": {},
+              "schema": null,
+              "__typename": "ResponsePayload"
+            }
+          ],
+          "requestPayloads": [],
+          "authentication": null,
+          "__typename": "Endpoint"
+        },
+        {
+          "id": "53aa5087e4b07e1f4ebeb433",
+          "index": null,
+          "createdAt": "2014-06-25T04:31:03.275Z",
+          "group": null,
+          "method": "GET",
+          "name": "Playlist",
+          "route": "/playlist/{id}",
+          "description": "A playlist object",
+          "summary": "",
+          "isGraphQL": false,
+          "endpointPath": null,
+          "externalDocs": null,
+          "graphQLSchema": null,
+          "params": {
+            "parameters": [
+              {
+                "createdAt": 1403670663369,
+                "updatedAt": 1403670663442,
+                "id": "53aa5087e4b0a705fcc318bf",
+                "name": "id",
+                "endpoint": "53aa5087e4b07e1f4ebeb433",
+                "querystring": false,
+                "paramType": "STRING",
+                "condition": "REQUIRED",
+                "description": "The playlist's Deezer id",
+                "status": "ACTIVE",
+                "type": "routeparameter"
+              }
+            ],
+            "__typename": "EndpointParams"
+          },
+          "appliedOauth2Scopes": [],
+          "responsePayloads": [
+            {
+              "id": "53aa5087e4b0b60946a2f5eb",
+              "name": "Playlist Response",
+              "format": "Text",
+              "body": null,
+              "headers": null,
+              "description": "",
+              "type": "apipayload",
+              "statusCode": null,
+              "apiendpoint": null,
+              "examples": {},
+              "schema": null,
+              "__typename": "ResponsePayload"
+            }
+          ],
+          "requestPayloads": [],
+          "authentication": null,
+          "__typename": "Endpoint"
+        },
+        {
+          "id": "53aa5086e4b0a798dbd1a60b",
+          "index": null,
+          "createdAt": "2014-06-25T04:31:02.159Z",
+          "group": null,
+          "method": "GET",
+          "name": "Artist",
+          "route": "/artist/{id}",
+          "description": "An artist object",
+          "summary": "",
+          "isGraphQL": false,
+          "endpointPath": null,
+          "externalDocs": null,
+          "graphQLSchema": null,
+          "params": {
+            "parameters": [
+              {
+                "createdAt": 1403670662208,
+                "updatedAt": 1403670662260,
+                "id": "53aa5086e4b0b60946a2f5e5",
+                "name": "id",
+                "endpoint": "53aa5086e4b0a798dbd1a60b",
+                "querystring": false,
+                "paramType": "STRING",
+                "condition": "REQUIRED",
+                "description": "The artist's Deezer id",
+                "status": "ACTIVE",
+                "type": "routeparameter"
+              }
+            ],
+            "__typename": "EndpointParams"
+          },
+          "appliedOauth2Scopes": [],
+          "responsePayloads": [
+            {
+              "id": "53aa5086e4b0a9b1348da69a",
+              "name": "Artist Response",
+              "format": "Text",
+              "body": null,
+              "headers": null,
+              "description": "",
+              "type": "apipayload",
+              "statusCode": null,
+              "apiendpoint": null,
+              "examples": {},
+              "schema": null,
+              "__typename": "ResponsePayload"
+            }
+          ],
+          "requestPayloads": [],
+          "authentication": null,
+          "__typename": "Endpoint"
+        },
+        {
+          "id": "53aa5086e4b0a9b1348da69e",
+          "index": null,
+          "createdAt": "2014-06-25T04:31:02.659Z",
+          "group": null,
+          "method": "GET",
+          "name": "Editorial",
+          "route": "/editorial/{id}",
+          "description": "An editorial object",
+          "summary": "",
+          "isGraphQL": false,
+          "endpointPath": null,
+          "externalDocs": null,
+          "graphQLSchema": null,
+          "params": {
+            "parameters": [
+              {
+                "createdAt": 1403670662716,
+                "updatedAt": 1403670662774,
+                "id": "53aa5086e4b07e1f4ebeb42e",
+                "name": "id",
+                "endpoint": "53aa5086e4b0a9b1348da69e",
+                "querystring": false,
+                "paramType": "STRING",
+                "condition": "REQUIRED",
+                "description": "The editorial's Deezer id",
+                "status": "ACTIVE",
+                "type": "routeparameter"
+              }
+            ],
+            "__typename": "EndpointParams"
+          },
+          "appliedOauth2Scopes": [],
+          "responsePayloads": [
+            {
+              "id": "53aa5086e4b0a798dbd1a60e",
+              "name": "Editorial Response",
+              "format": "Text",
+              "body": null,
+              "headers": null,
+              "description": "",
+              "type": "apipayload",
+              "statusCode": null,
+              "apiendpoint": null,
+              "examples": {},
+              "schema": null,
+              "__typename": "ResponsePayload"
+            }
+          ],
+          "requestPayloads": [],
+          "authentication": null,
+          "__typename": "Endpoint"
+        },
+        {
+          "id": "53aa5087e4b0a798dbd1a615",
+          "index": null,
+          "createdAt": "2014-06-25T04:31:03.786Z",
+          "group": null,
+          "method": "GET",
+          "name": "Track",
+          "route": "/track/{id}",
+          "description": "A track object",
+          "summary": "",
+          "isGraphQL": false,
+          "endpointPath": null,
+          "externalDocs": null,
+          "graphQLSchema": null,
+          "params": {
+            "parameters": [
+              {
+                "createdAt": 1403670663835,
+                "updatedAt": 1403670663913,
+                "id": "53aa5087e4b0a798dbd1a616",
+                "name": "id",
+                "endpoint": "53aa5087e4b0a798dbd1a615",
+                "querystring": false,
+                "paramType": "STRING",
+                "condition": "REQUIRED",
+                "description": "The track's Deezer id",
+                "status": "ACTIVE",
+                "type": "routeparameter"
+              }
+            ],
+            "__typename": "EndpointParams"
+          },
+          "appliedOauth2Scopes": [],
+          "responsePayloads": [
+            {
+              "id": "53aa5087e4b0b60946a2f5ef",
+              "name": "Track Response",
+              "format": "Text",
+              "body": null,
+              "headers": null,
+              "description": "",
+              "type": "apipayload",
+              "statusCode": null,
+              "apiendpoint": null,
+              "examples": {},
+              "schema": null,
+              "__typename": "ResponsePayload"
+            }
+          ],
+          "requestPayloads": [],
+          "authentication": null,
+          "__typename": "Endpoint"
+        },
+        {
+          "id": "53aa5086e4b07e1f4ebeb42d",
+          "index": null,
+          "createdAt": "2014-06-25T04:31:02.354Z",
+          "group": null,
+          "method": "GET",
+          "name": "Comment",
+          "route": "/comment/{id}",
+          "description": "A comment object",
+          "summary": "",
+          "isGraphQL": false,
+          "endpointPath": null,
+          "externalDocs": null,
+          "graphQLSchema": null,
+          "params": {
+            "parameters": [
+              {
+                "createdAt": 1403670662445,
+                "updatedAt": 1403670662532,
+                "id": "53aa5086e4b008bb2ef864f7",
+                "name": "id",
+                "endpoint": "53aa5086e4b07e1f4ebeb42d",
+                "querystring": false,
+                "paramType": "STRING",
+                "condition": "REQUIRED",
+                "description": "The playlist's Deezer id",
+                "status": "ACTIVE",
+                "type": "routeparameter"
+              }
+            ],
+            "__typename": "EndpointParams"
+          },
+          "appliedOauth2Scopes": [],
+          "responsePayloads": [
+            {
+              "id": "53aa5086e4b0a9b1348da69b",
+              "name": "Comment Response",
+              "format": "Text",
+              "body": null,
+              "headers": null,
+              "description": "",
+              "type": "apipayload",
+              "statusCode": null,
+              "apiendpoint": null,
+              "examples": {},
+              "schema": null,
+              "__typename": "ResponsePayload"
+            }
+          ],
+          "requestPayloads": [],
+          "authentication": null,
+          "__typename": "Endpoint"
+        },
+        {
+          "id": "53aa5085e4b07e1f4ebeb42c",
+          "index": null,
+          "createdAt": "2014-06-25T04:31:01.900Z",
+          "group": null,
+          "method": "GET",
+          "name": "Album",
+          "route": "/album/{id}",
+          "description": "An album object",
+          "summary": "",
+          "isGraphQL": false,
+          "endpointPath": null,
+          "externalDocs": null,
+          "graphQLSchema": null,
+          "params": {
+            "parameters": [
+              {
+                "createdAt": 1403670661972,
+                "updatedAt": 1403670662070,
+                "id": "53aa5085e4b051a76d240882",
+                "name": "id",
+                "endpoint": "53aa5085e4b07e1f4ebeb42c",
+                "querystring": false,
+                "paramType": "STRING",
+                "condition": "REQUIRED",
+                "description": "The Deezer album id",
+                "status": "ACTIVE",
+                "type": "routeparameter"
+              }
+            ],
+            "__typename": "EndpointParams"
+          },
+          "appliedOauth2Scopes": [],
+          "responsePayloads": [
+            {
+              "id": "53aa5085e4b07e1f4ebeb42b",
+              "name": "Album Response",
+              "format": "Text",
+              "body": null,
+              "headers": null,
+              "description": "",
+              "type": "apipayload",
+              "statusCode": null,
+              "apiendpoint": null,
+              "examples": {},
+              "schema": null,
+              "__typename": "ResponsePayload"
+            }
+          ],
+          "requestPayloads": [],
+          "authentication": null,
+          "__typename": "Endpoint"
+        }
+      ],
+      "authentication": null,
+      "payloads": [
+        {
+          "id": "53aa5085e4b07e1f4ebeb428",
+          "name": "-Search Response",
+          "format": "Text",
+          "body": null,
+          "headers": null,
+          "description": "",
+          "type": "apipayload",
+          "statusCode": null,
+          "apiendpoint": null,
+          "examples": {},
+          "schema": null,
+          "__typename": "ResponsePayload"
+        },
+        {
+          "id": "53aa5085e4b07e1f4ebeb42b",
+          "name": "Album Response",
+          "format": "Text",
+          "body": null,
+          "headers": null,
+          "description": "",
+          "type": "apipayload",
+          "statusCode": null,
+          "apiendpoint": null,
+          "examples": {},
+          "schema": null,
+          "__typename": "ResponsePayload"
+        },
+        {
+          "id": "53aa5086e4b0a9b1348da69a",
+          "name": "Artist Response",
+          "format": "Text",
+          "body": null,
+          "headers": null,
+          "description": "",
+          "type": "apipayload",
+          "statusCode": null,
+          "apiendpoint": null,
+          "examples": {},
+          "schema": null,
+          "__typename": "ResponsePayload"
+        },
+        {
+          "id": "53aa5086e4b0a9b1348da69b",
+          "name": "Comment Response",
+          "format": "Text",
+          "body": null,
+          "headers": null,
+          "description": "",
+          "type": "apipayload",
+          "statusCode": null,
+          "apiendpoint": null,
+          "examples": {},
+          "schema": null,
+          "__typename": "ResponsePayload"
+        },
+        {
+          "id": "53aa5086e4b0a798dbd1a60e",
+          "name": "Editorial Response",
+          "format": "Text",
+          "body": null,
+          "headers": null,
+          "description": "",
+          "type": "apipayload",
+          "statusCode": null,
+          "apiendpoint": null,
+          "examples": {},
+          "schema": null,
+          "__typename": "ResponsePayload"
+        },
+        {
+          "id": "53aa5086e4b0596140340671",
+          "name": "Genre Response",
+          "format": "Text",
+          "body": null,
+          "headers": null,
+          "description": "",
+          "type": "apipayload",
+          "statusCode": null,
+          "apiendpoint": null,
+          "examples": {},
+          "schema": null,
+          "__typename": "ResponsePayload"
+        },
+        {
+          "id": "53aa5087e4b0b60946a2f5e9",
+          "name": "Infos Response",
+          "format": "Text",
+          "body": null,
+          "headers": null,
+          "description": "",
+          "type": "apipayload",
+          "statusCode": null,
+          "apiendpoint": null,
+          "examples": {},
+          "schema": null,
+          "__typename": "ResponsePayload"
+        },
+        {
+          "id": "53aa5087e4b0b60946a2f5eb",
+          "name": "Playlist Response",
+          "format": "Text",
+          "body": null,
+          "headers": null,
+          "description": "",
+          "type": "apipayload",
+          "statusCode": null,
+          "apiendpoint": null,
+          "examples": {},
+          "schema": null,
+          "__typename": "ResponsePayload"
+        },
+        {
+          "id": "53aa5087e4b0a9b1348da6a2",
+          "name": "Radio Response",
+          "format": "Text",
+          "body": null,
+          "headers": null,
+          "description": "",
+          "type": "apipayload",
+          "statusCode": null,
+          "apiendpoint": null,
+          "examples": {},
+          "schema": null,
+          "__typename": "ResponsePayload"
+        },
+        {
+          "id": "53aa5087e4b0b60946a2f5ef",
+          "name": "Track Response",
+          "format": "Text",
+          "body": null,
+          "headers": null,
+          "description": "",
+          "type": "apipayload",
+          "statusCode": null,
+          "apiendpoint": null,
+          "examples": {},
+          "schema": null,
+          "__typename": "ResponsePayload"
+        }
+      ],
+      "groups": [],
+      "publicdns": [
+        {
+          "proxyMode": "",
+          "address": "deezerdevs-deezer.p.rapidapi.com",
+          "current": true,
+          "id": "53aa5088e4b0b60946a2f5f0",
+          "__typename": "Publicdns"
+        }
+      ]
+    }
+  }
+}
